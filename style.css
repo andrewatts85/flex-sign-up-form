@@ -1,0 +1,87 @@
+/* grid engine 1/2 */
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  flex: 1;
+  margin: .4em .4em .4em;
+}
+
+/* custom styles */
+body {
+  padding: 1em;
+}
+
+/* form styles */
+form {
+  margin: 3% auto;
+  max-width: 25em;
+  border: .063em solid lightgray;
+}
+
+form, input {
+  /*border-radius: .15em;*/
+}
+
+form .row:nth-child(1) .col {
+  background-color: teal;
+  margin: 0;
+  /*border-radius: .15em .15em 0 0;*/
+  
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.8em;
+  border: .063em solid lightgray;
+  padding-left: .5em;
+}
+
+form .row:nth-child(3) .col:nth-child(1) {
+  flex-grow: 2;
+}
+
+#btn {
+  background-color: #fff;
+  color: tomato;
+  border: .18em solid tomato;
+  padding: 1.5em 0;
+  line-height: 0;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+
+#btn:hover {
+  background-color: tomato;
+  border-color: tomato;
+  color: white;
+}
+
+label {
+  font-weight: bold;
+  color: gray;
+  font-size: .89em;
+}
+
+.valid {
+  border: .063em solid lightgreen;
+}
+
+.invalid {
+  border: .063em solid red;
+}
+
+/* devices 400px wide or more */ /* grid engine 2/2 */
+@media screen and (min-width: 400px) {
+	.row {
+    flex-direction: row;
+  }
+}
